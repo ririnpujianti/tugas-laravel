@@ -57,7 +57,15 @@
         <h1>Selamat Datang</h1>
         <p>Jangan salah mengambil langkah di masa muda.</p>
         <p>Penyesalan tidak akan datang sekali, tapi berkali-kali.</p>
-        <a href="#">Get Started</a>
+        <a href="#">Masuk</a>
+        <h1>Pesan dari Form</h1>
+
+        <!-- Cek jika pesan ada -->
+    @if(isset($message))
+        <p>Pesan: {{ $message }}</p>
+    @else
+        <p>Tidak ada pesan yang dikirim.</p>
+    @endif
     </div>
 </body>
 </html>
