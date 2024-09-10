@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\StoreController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RumahController;
 use Illuminate\Support\Facades\Route;
@@ -19,3 +20,5 @@ Route::get('/book', [BookController::class, 'index']);
 
 Route::get('/home', [RumahController::class, 'index']); // Untuk menampilkan form
 Route::post('/home', [RumahController::class, 'submit']); // Untuk mengirim form
+Route::get('/create', [StoreController::class, 'store']); // Untuk menampilkan form
+Route::get('/show', [StoreController::class, 'show']);
