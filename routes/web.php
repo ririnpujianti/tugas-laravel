@@ -22,3 +22,8 @@ Route::get('/home', [RumahController::class, 'index']); // Untuk menampilkan for
 Route::post('/home', [RumahController::class, 'submit']); // Untuk mengirim form
 Route::get('/create', [StoreController::class, 'store']); // Untuk menampilkan form
 Route::get('/show', [StoreController::class, 'show']);
+Route::get('/products/{id}/edit', [StoreController::class, 'edit']);
+Route::put('/products/{id}', [StoreController::class, 'update']);
+Route::delete('/products/{id}', [StoreController::class, 'destroy']);
+Route::get('/input', [StoreController::class, 'input']);
+Route::post('/create', [StoreController::class, 'store']);
