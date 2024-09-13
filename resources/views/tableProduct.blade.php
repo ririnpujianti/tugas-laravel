@@ -43,5 +43,7 @@
         </tbody>
     </table>
 
+    {{ $Products->links() }}
+    
 </body>
 </html>
