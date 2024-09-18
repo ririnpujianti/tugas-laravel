@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RelasiController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\RumahController;
@@ -27,3 +28,6 @@ Route::put('/products/{id}', [StoreController::class, 'update']);
 Route::delete('/products/{id}', [StoreController::class, 'destroy']);
 Route::get('/input', [StoreController::class, 'input']);
 Route::post('/create', [StoreController::class, 'store']);
+Route::get('/ktp', [RelasiController::class, 'index']);
+Route::get('/pengguna/create', [RelasiController::class, 'create']);
+Route::post('/pengguna/store', [RelasiController::class, 'store']);
