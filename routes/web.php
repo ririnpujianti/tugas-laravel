@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\RelasiController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\BookController;
@@ -31,3 +32,4 @@ Route::post('/create', [StoreController::class, 'store']);
 Route::get('/ktp', [RelasiController::class, 'index']);
 Route::get('/pengguna/create', [RelasiController::class, 'create']);
 Route::post('/pengguna/store', [RelasiController::class, 'store']);
+Route::get('/school', [SchoolController::class, 'index']);
