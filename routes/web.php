@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\SekolahController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\RelasiController;
@@ -35,3 +36,12 @@ Route::get('/pengguna/create', [RelasiController::class, 'create']);
 Route::post('/pengguna/store', [RelasiController::class, 'store']);
 Route::get('/school', [SchoolController::class, 'index']);
 Route::get('/sekolah', [SekolahController::class, 'index']);
+
+
+// Mendefinisikan route untuk menghasilkan file PDF
+Route::get('/generate-pdf', [PdfController::class, 'generatePDF']);
+// Ketika pengguna mengakses URL '/generate-pdf', sistem akan mengunduh PDF yang dihasilkan
+
+// Mendefinisikan route untuk menampilkan file PDF langsung di browser
+Route::get('/stream-pdf', [PdfController::class, 'streamPDF']);
+// Ketika pengguna mengakses URL '/stream-pdf', sistem akan menampilkan PDF di browser
